@@ -2,7 +2,15 @@ const express = require("express");
 const app = express();
 
 const multer = require("multer");
-const upload = multer({dest:'uploads/'}).single('userFile');
+const storage = multer.diskStorage({
+    destination: function(req, fine, callback){
+        callback(null, './server');
+    },
+    filename: function(req, file, callback) {
+        callback(null, file.fieldname + '-' + Date.now() + '.json');
+    }
+});
+const upload = multer({storage : storage}).single('userFile');
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
