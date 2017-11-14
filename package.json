@@ -1,0 +1,24 @@
+{
+  "name": "file-upload-nodejs",
+  "version": "1.0.0",
+  "description": "Spike for me to work out how to use multer with nodeJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanguslee/file-upload-nodejs.git"
+  },
+  "author": "khanguslee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khanguslee/file-upload-nodejs/issues"
+  },
+  "homepage": "https://github.com/khanguslee/file-upload-nodejs#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "multer": "^1.3.0"
+  }
+}
